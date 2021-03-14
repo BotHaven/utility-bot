@@ -4,8 +4,10 @@ import {
   InhibitorHandler,
   ListenerHandler,
 } from "discord-akairo";
+import { Message } from "discord.js";
 import * as path from "path";
 import IMyClient from "./client.interface";
+import { Cities, CityKeys } from "./commands/utility/stables";
 import config from "./config";
 class MyClient extends AkairoClient implements IMyClient {
   commandHandler: CommandHandler;
@@ -50,7 +52,7 @@ class MyClient extends AkairoClient implements IMyClient {
 }
 
 export default new MyClient();
-
+export const stables = new Map<CityKeys, Message>();
 // (async function init(){
 //   const res = await fetch(`${config.api.prefix}/user`, "GET")
 //   const users = await res.json();
