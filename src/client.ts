@@ -20,7 +20,8 @@ class MyClient extends AkairoClient implements IMyClient {
       },
       {
         disableMentions: "everyone",
-        presence: {activity: {name: `${config.bot.prefix(process.env.NODE_ENV)} help`, type: "LISTENING"}, status: "online"}
+        presence: {activity: {name: `${config.bot.prefix(process.env.NODE_ENV)} help`, type: "LISTENING"}, status: "online"},
+        partials: ['CHANNEL', 'MESSAGE', "USER", "REACTION"],
       }
     );
     this.commandHandler = new CommandHandler(this, {

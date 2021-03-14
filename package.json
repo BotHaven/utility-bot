@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "@bothaven/common": "^1.2.3",
+    "@bothaven/common": "^1.3.0",
+    "@the-land-of-albion/common": "^1.3.0",
     "discord-akairo": "github:discord-akairo/discord-akairo",
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
